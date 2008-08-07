@@ -1,10 +1,10 @@
+# THIS TEST FILE WAS WRITTEN BY DAVE ROLSKY
+
 use strict;
 use warnings;
-
 use Test::More;
 
-BEGIN
-{
+BEGIN {
     my $tests = 35;
     eval { require Exception::Class };
     $tests++ if ! $@ && $Exception::Class::VERSION >= 1.09;

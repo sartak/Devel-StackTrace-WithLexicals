@@ -1,6 +1,6 @@
+# THIS TEST FILE WAS WRITTEN BY DAVE ROLSKY
 use strict;
 use warnings;
-
 use Test::More;
 
 eval 'use Encode';
