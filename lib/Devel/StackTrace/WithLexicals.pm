@@ -167,6 +167,14 @@ lexical variables.
 L<Devel::StackTrace::WithLexicals> is pretty good at generating stack traces
 with all your callers' lexical variables.
 
+=head1 METHODS
+
+All the same as L<Devel::StackTrace>, except that frames (in class
+L<Devel::StackTrace::WithLexicals::Frame>) also have a C<lexicals> method. This
+returns the same hashref as returned by L<PadWalker>.
+
+Simple, really.
+
 =head1 AUTHOR
 
 Shawn M Moore, C<< <sartak@gmail.com> >>
