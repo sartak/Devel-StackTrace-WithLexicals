@@ -8,7 +8,23 @@ use PadWalker 'peek_my';
 
 our $VERSION = '0.01';
 
+sub _record_caller_data {
+    my $self = shift;
 
+    $self->SUPER::_record_caller_data(@_);
+
+    my $caller = -1;
+    my $walker = 0;
+
+    while (my (undef, undef, undef, $sub) = caller(++$caller)) {
+        next if $sub eq '(eval)';
+
+        $self->{raw}[$caller]{lexicals} = peek_my(++$walker);
+    }
+
+    # don't want to include the frame for this method!
+    shift @{ $self->{raw} };
+}
 
 1;
 
