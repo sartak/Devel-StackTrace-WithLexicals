@@ -148,7 +148,7 @@ __END__
 
 =head1 NAME
 
-Devel::StackTrace::WithLexicals - ???
+Devel::StackTrace::WithLexicals - Devel::StackTrace + PadWalker
 
 =head1 SYNOPSIS
 
@@ -159,7 +159,13 @@ Devel::StackTrace::WithLexicals - ???
 
 =head1 DESCRIPTION
 
+L<Devel::StackTrace> is pretty good at generating stack traces.
 
+L<PadWalker> is pretty good at inspection and modification of your callers'
+lexical variables.
+
+L<Devel::StackTrace::WithLexicals> is pretty good at generating stack traces
+with all your callers' lexical variables.
 
 =head1 AUTHOR
 
@@ -169,6 +175,9 @@ Shawn M Moore, C<< <sartak@gmail.com> >>
 
 No known bugs.
 
+I had to copy and paste some code from L<Devel::StackTrace> to achieve this
+(it's hard to subclass). There may be bugs lingering here.
+
 Please report any bugs through RT: email
 C<bug-devel-stacktrace-withlexicals at rt.cpan.org>, or browse
 L<http://rt.cpan.org/NoAuth/ReportBug.html?Queue=Devel-StackTrace-WithLexicals>.
@@ -176,6 +185,8 @@ L<http://rt.cpan.org/NoAuth/ReportBug.html?Queue=Devel-StackTrace-WithLexicals>.
 =head1 COPYRIGHT AND LICENSE
 
 Copyright 2008 Shawn M Moore.
+
+Some portions written by Dave Rolsky, they belong to him.
 
 This program is free software; you can redistribute it and/or modify it
 under the same terms as Perl itself.
