@@ -2,6 +2,7 @@
 package Devel::StackTrace::WithLexicals;
 use strict;
 use warnings;
+use base 'Devel::StackTrace';
 
 our $VERSION = '0.01';
 
