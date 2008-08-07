@@ -153,6 +153,9 @@ Devel::StackTrace::WithLexicals - ???
 
     use Devel::StackTrace::WithLexicals;
 
+    my $trace = Devel::StackTrace::WithLexicals->new;
+    ${ $trace->frame(0)->lexicals->{'$self'} }->oh_god_why();
+
 =head1 DESCRIPTION
 
 
