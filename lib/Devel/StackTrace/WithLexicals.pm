@@ -19,6 +19,7 @@ sub _record_caller_data {
     my $walker = 0;
 
     while (my (undef, undef, undef, $sub) = caller(++$caller)) {
+        # PadWalker ignores eval block and eval string, we must do so too
         next if $sub eq '(eval)';
 
         $self->{raw}[$caller]{lexicals} = peek_my(++$walker);
