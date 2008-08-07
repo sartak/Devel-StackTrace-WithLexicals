@@ -107,8 +107,7 @@ sub _make_frames {
     my @i_pack_re = $self->_ignore_package_list;
     my %i_class   = $self->_ignore_class_map;
 
-    for my $r (@{ $self->{raw} })
-    {
+    for my $r (@{ $self->{raw} }) {
         next if grep { $r->{caller}[0] =~ /$_/ } @i_pack_re;
         next if grep { $r->{caller}[0]->isa($_) } keys %i_class;
 
