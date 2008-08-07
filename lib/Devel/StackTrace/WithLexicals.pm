@@ -4,6 +4,8 @@ use strict;
 use warnings;
 use base 'Devel::StackTrace';
 
+use PadWalker 'peek_my';
+
 our $VERSION = '0.01';
 
 
