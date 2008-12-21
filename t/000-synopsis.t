@@ -10,13 +10,15 @@ do {
     sub oh_god_why { $ok = 1 }
 };
 
-my $self = bless {}, 'Synopsis';
-
-sub {
+my $sub = sub {
     use Devel::StackTrace::WithLexicals;
     my $trace = Devel::StackTrace::WithLexicals->new;
-    ${ $trace->frame(0)->lexicals->{'$self'} }->oh_god_why();
-}->();
+    ${ $trace->frame(1)->lexicals->{'$self'} }->oh_god_why();
+};
+
+my $self = bless {}, 'Synopsis';
+
+$sub->();
 
 ok($ok, "oh_god_why called");
 
