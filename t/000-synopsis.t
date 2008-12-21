@@ -13,7 +13,7 @@ do {
 my $sub = sub {
     use Devel::StackTrace::WithLexicals;
     my $trace = Devel::StackTrace::WithLexicals->new;
-    ${ $trace->frame(1)->lexicals->{'$self'} }->oh_god_why();
+    ${ $trace->frame(1)->lexical('$self') }->oh_god_why();
 };
 
 my $self = bless {}, 'Synopsis';
