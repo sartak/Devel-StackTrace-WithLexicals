@@ -161,7 +161,7 @@ Devel::StackTrace::WithLexicals - Devel::StackTrace + PadWalker
 
 L<Devel::StackTrace> is pretty good at generating stack traces.
 
-L<PadWalker> is pretty good at inspection and modification of your callers'
+L<PadWalker> is pretty good at the inspection and modification of your callers'
 lexical variables.
 
 L<Devel::StackTrace::WithLexicals> is pretty good at generating stack traces
