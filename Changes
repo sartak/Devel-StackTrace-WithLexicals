@@ -1,5 +1,7 @@
 Revision history for Devel-StackTrace-WithLexicals
 
+0.03
+
 0.02    Sun Dec 21 15:56:30 2008
         Depend on a newish Devel::StackTrace.
 
