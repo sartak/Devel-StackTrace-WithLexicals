@@ -1,4 +1,3 @@
-#!/usr/bin/env perl
 package Devel::StackTrace::WithLexicals;
 use strict;
 use warnings;
