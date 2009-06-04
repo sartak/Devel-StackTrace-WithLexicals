@@ -7,7 +7,5 @@ githubmeta;
 requires 'Devel::StackTrace' => '1.1902';
 requires 'PadWalker';
 
-build_requires 'Test::More';
-
 WriteAll;
 
