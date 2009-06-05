@@ -185,7 +185,7 @@ I had to copy and paste some code from L<Devel::StackTrace> to achieve this
 
 =head1 COPYRIGHT AND LICENSE
 
-Copyright 2008 Shawn M Moore.
+Copyright 2008-2009 Shawn M Moore.
 
 Some portions written by Dave Rolsky, they belong to him.
 
