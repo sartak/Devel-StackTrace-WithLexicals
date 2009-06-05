@@ -180,14 +180,8 @@ Shawn M Moore, C<< <sartak@gmail.com> >>
 
 =head1 BUGS
 
-No known bugs.
-
 I had to copy and paste some code from L<Devel::StackTrace> to achieve this
 (it's hard to subclass). There may be bugs lingering here.
-
-Please report any bugs through RT: email
-C<bug-devel-stacktrace-withlexicals at rt.cpan.org>, or browse
-L<http://rt.cpan.org/NoAuth/ReportBug.html?Queue=Devel-StackTrace-WithLexicals>.
 
 =head1 COPYRIGHT AND LICENSE
 
