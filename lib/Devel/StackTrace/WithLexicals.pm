@@ -1,6 +1,7 @@
 package Devel::StackTrace::WithLexicals;
 use strict;
 use warnings;
+use 5.008001;
 use base 'Devel::StackTrace';
 
 use Devel::StackTrace::WithLexicals::Frame;
