@@ -22,6 +22,12 @@ sub _record_caller_data {
         next if $sub eq '(eval)';
 
         $self->{raw}[$caller]{lexicals} = peek_my(++$walker);
+        if ($self->{no_refs}) {
+            for (values %{ $self->{raw}[$caller]{lexicals} }) {
+                $_ = $$_ if ref($_) eq 'REF';
+                $_ = $self->_ref_as_string($_);
+            }
+        }
     }
 
     # don't want to include the frame for this method!
