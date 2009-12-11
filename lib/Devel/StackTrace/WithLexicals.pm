@@ -178,6 +178,9 @@ All the same as L<Devel::StackTrace>, except that frames (in class
 L<Devel::StackTrace::WithLexicals::Frame>) also have a C<lexicals> method. This
 returns the same hashref as returned by L<PadWalker>.
 
+If the C<no_refs> option to L<Devel::StackTrace> is used, then each reference
+is stringified. This can be useful to avoid leaking memory.
+
 Simple, really.
 
 =head1 AUTHOR

@@ -1,6 +1,7 @@
 Revision history for Devel-StackTrace-WithLexicals
 
-0.04
+0.04    Fri Dec 11 00:19:45 2009
+        Respect Devel::StackTrace's no_refs for lexicals
 
 0.03    Tue Dec 23 22:25:52 2008
         Fix SIGNATURE.
