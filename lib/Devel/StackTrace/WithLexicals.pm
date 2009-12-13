@@ -26,7 +26,7 @@ sub _record_caller_data {
         if ($self->{no_refs}) {
             for (values %{ $self->{raw}[$caller]{lexicals} }) {
                 $_ = $$_ if ref($_) eq 'REF';
-                $_ = $self->_ref_as_string($_);
+                $_ = $self->_ref_to_string($_);
             }
         }
     }
@@ -98,7 +98,7 @@ sub _normalize_args {
                 };
             }
             else {
-                $_ = $self->_ref_as_string($_);
+                $_ = $self->_ref_to_string($_);
             }
         }
     }
