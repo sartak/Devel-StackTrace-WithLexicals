@@ -5,7 +5,7 @@ all_from 'lib/Devel/StackTrace/WithLexicals.pm';
 githubmeta;
 
 requires 'Devel::StackTrace' => '1.22';
-requires 'PadWalker';
+requires 'PadWalker' => '1.92';
 
 WriteAll;
 
