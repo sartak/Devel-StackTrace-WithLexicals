@@ -1,5 +1,8 @@
 Revision history for Devel-StackTrace-WithLexicals
 
+0.07    Fri Nov 26 2010
+        Depend on Devel::StackTrace 1.25 (Stephen R. Scaffidi) [rt.cpan.org #61715]
+
 0.06    Mon Jul 19 2010
         Depend on PadWalker 1.92 for bugfixes (rafl)
 
