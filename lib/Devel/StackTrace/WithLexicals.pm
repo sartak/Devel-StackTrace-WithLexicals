@@ -140,6 +140,8 @@ sub _add_frame {
 
     my $frame = $self->_frame_class->new(
         %$frame_data,
+        message          => $self->{message},
+        indent           => $self->{indent},
         respect_overload => $self->{respect_overload},
         max_arg_length   => $self->{max_arg_length},
     );

@@ -13,6 +13,8 @@ sub new {
         $args{args},
         $args{respect_overload},
         $args{max_arg_length},
+        $args{message},
+        $args{indent},
     );
 
     $self->{lexicals} = $args{lexicals};
