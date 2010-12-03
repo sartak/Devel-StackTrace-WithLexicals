@@ -1,5 +1,8 @@
 Revision history for Devel-StackTrace-WithLexicals
 
+0.08    Fri Dec  3 2010
+        Pass message and indent to Frames (Tatsuhiko Miyagawa)
+
 0.07    Fri Nov 26 2010
         Depend on Devel::StackTrace 1.25 (Stephen R. Scaffidi) [rt.cpan.org #61715]
 
