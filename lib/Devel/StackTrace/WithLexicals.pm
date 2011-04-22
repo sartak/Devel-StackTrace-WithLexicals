@@ -8,7 +8,7 @@ use Devel::StackTrace::WithLexicals::Frame;
 
 use PadWalker 'peek_my';
 
-our $VERSION = '0.09';
+our $VERSION = '0.10';
 
 sub _record_caller_data {
     my $self = shift;

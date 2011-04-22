@@ -1,5 +1,8 @@
 Revision history for Devel-StackTrace-WithLexicals
 
+0.10    2011-04-22
+        Fix a minor packaging problem (Kent Fredric) [rt.cpan.org #67696]
+
 0.09    2011-04-20
         Remove old test that depended on broken UTF8 (reported by hanekomu)
 
