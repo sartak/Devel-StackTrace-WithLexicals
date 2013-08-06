@@ -79,7 +79,7 @@ sub _normalize_args {
     if ($self->{no_refs}) {
         for (grep { ref } @$args) {
             # I can't remember what this is about but I think
-            # it must be to avoid a loop between between
+            # it must be to avoid a loop between
             # Exception::Class and this module.
             if (UNIVERSAL::isa($_, 'Exception::Class::Base')) {
                 $_ = do {
