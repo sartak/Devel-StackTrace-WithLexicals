@@ -11,7 +11,7 @@ sub outer {
 
 sub inner {
     my $inside_inner = 1;
-    Devel::StackTrace::WithLexicals->new(unsafe_ref_capture=>1);
+    Devel::StackTrace::WithLexicals->new;
 }
 
 my $main_program = 1;

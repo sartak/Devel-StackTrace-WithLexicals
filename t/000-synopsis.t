@@ -12,7 +12,7 @@ do {
 
 my $sub = sub {
     use Devel::StackTrace::WithLexicals;
-    my $trace = Devel::StackTrace::WithLexicals->new(unsafe_ref_capture=>1);
+    my $trace = Devel::StackTrace::WithLexicals->new;
     ${ $trace->frame(1)->lexical('$self') }->oh_god_why();
 };
 
