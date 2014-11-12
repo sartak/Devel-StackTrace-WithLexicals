@@ -20,17 +20,17 @@ use Devel::StackTrace::WithLexicals;
         $f[0]->subroutine, 'main::bar',
         "First frame subroutine should be main::bar"
     );
-    is(
-        (sort keys $f[0]->lexicals)[0], '$bar_var',
-        'First frame lexical should be $bar_var'
+    is_deeply(
+        [sort keys $f[0]->lexicals], ['$baz_var'],
+        'First frame lexical should be $baz_var'
     );
     is(
         $f[1]->subroutine, 'main::baz',
         "Second frame subroutine should be main::baz"
     );
-    is(
-        (sort keys $f[1]->lexicals)[0], '$baz_var',
-        'Second frame lexical should be $baz_var'
+    is_deeply(
+        [sort keys $f[1]->lexicals], [],
+        'Second frame should have no lexicals'
     );
 }
 

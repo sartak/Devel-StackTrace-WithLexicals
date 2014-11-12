@@ -21,7 +21,7 @@ sub _record_caller_data {
 
     # PadWalker ignores eval block and eval string, so we have to keep
     # a different frame count for it
-    my $walker = -1;
+    my $walker = 0;
     for my $caller_count (0..$x) {
         my $sub = (caller($caller_count))[3];
         ++$walker unless $sub eq '(eval)';

@@ -6,6 +6,7 @@ use Test::More;
 use Devel::StackTrace::WithLexicals;
 
 {
+    my $some=1;
     my $trace = foo( [] );
     is(
         0 + grep( ref, map { $_->args } $trace->frames ), 0,
@@ -16,7 +17,6 @@ use Devel::StackTrace::WithLexicals;
 done_testing();
 
 sub foo {
-    my $some=1;
     return Devel::StackTrace::WithLexicals->new(
         frame_filter => sub {
             my $frame = shift;
