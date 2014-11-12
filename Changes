@@ -1,5 +1,8 @@
 Revision history for Devel-StackTrace-WithLexicals
 
+2.00    2014-11-12
+        Devel::StackTrace 2.00 compat (dakkar) [rt.cpan.org #99957] [rt.cpan.org #100278]
+
 0.10    2011-04-22
         Fix a minor packaging problem (Kent Fredric) [rt.cpan.org #67696]
 

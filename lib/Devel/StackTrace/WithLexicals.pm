@@ -8,7 +8,7 @@ use Devel::StackTrace::WithLexicals::Frame;
 
 use PadWalker 'peek_my';
 
-our $VERSION = '0.10';
+our $VERSION = '2.00';
 
 # mostly copied from Devel::StackTrace 2.00
 sub _record_caller_data {
