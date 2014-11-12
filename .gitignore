@@ -3,6 +3,7 @@ MANIFEST
 MANIFEST.bak
 META.yml
 MYMETA.yml
+MYMETA.json
 Makefile
 Makefile.old
 SIGNATURE
