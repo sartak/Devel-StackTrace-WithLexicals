@@ -2,22 +2,14 @@ package Devel::StackTrace::WithLexicals::Frame;
 use strict;
 use warnings;
 use Devel::StackTrace;
-use base 'Devel::StackTraceFrame';
+use base 'Devel::StackTrace::Frame';
 
 sub new {
     my $class = shift;
-    my %args  = @_;
 
-    my $self = $class->SUPER::new(
-        $args{caller},
-        $args{args},
-        $args{respect_overload},
-        $args{max_arg_length},
-        $args{message},
-        $args{indent},
-    );
+    my $self = $class->SUPER::new(@_);
 
-    $self->{lexicals} = $args{lexicals};
+    $self->{lexicals} = $_[6];
 
     return $self;
 }
