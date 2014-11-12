@@ -4,8 +4,8 @@ name     'Devel-StackTrace-WithLexicals';
 all_from 'lib/Devel/StackTrace/WithLexicals.pm';
 githubmeta;
 
-requires 'Devel::StackTrace' => '1.25';
-requires 'PadWalker' => '1.92';
+requires 'Devel::StackTrace' => '2.00';
+requires 'PadWalker' => '1.98';
 
 WriteAll;
 
