@@ -117,8 +117,23 @@ Devel::StackTrace::WithLexicals - Devel::StackTrace + PadWalker
 
     use Devel::StackTrace::WithLexicals;
 
-    my $trace = Devel::StackTrace::WithLexicals->new;
-    ${ $trace->frame(1)->lexical('$self') }->oh_god_why();
+    sub process_user {
+        my $item_count = 20;
+        price_items();
+        print "$item_count\n";    # prints 21
+    }
+
+    sub price_items {
+        my $trace = Devel::StackTrace::WithLexicals->new(
+            unsafe_ref_capture => 1    # warning: can cause memory leak
+        );
+        while ( my $frame = $trace->next_frame() ) {
+            my $item_count_ref = $frame->lexical('$item_count');
+            ${$item_count_ref}++ if ref $item_count_ref eq 'SCALAR';
+        }
+    }
+
+    process_user();
 
 =head1 DESCRIPTION
 
